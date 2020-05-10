@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
 
-/* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('respond with a resource');
+const router = express.Router();
+
+// log a user out
+router.get("/logout",(req,res) => {
+    req.logout();
+    res.redirect("/");
 });
-
-module.exports = router;
